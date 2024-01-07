@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Login() {
+function Login({login}) {
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -15,6 +15,7 @@ function Login() {
 
   function handleLogin(e) {
     e.preventDefault();
+    login()
   }
 
   return (
